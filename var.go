@@ -1,5 +1,8 @@
 /**
- * 变量使用章节
+ * 学习变量使用章节
+ * 定义的变量必须使用,否则在编译时,不能通过编译
+ * File:var.go
+ * time:2013-05-17
  */
 package main
 
@@ -19,28 +22,33 @@ const(
 //特殊变量 iota，初始值为0  每次赋值增加1  当遇到新的const时，再次初始化为0
 const(
   var4 = iota//=0
-  var5        //=1
-  var6        //=2
+  var5 = iota//=1
+  var6       //=2  值自动累加  
 )
+const viota = iota //=0表示
 
 //定义普通变量
 var var7 int = 1
 var var8,var9 int = 3,4
 
+var ai int
+ai = 1
+
+/按组定义变量
 var(
   var10 int
   var11 string
 )
 
 //最简化的定义方式
-var12 :=2.0
-var13,var14 := 5,6
+var12 :=2.0//自动添加变量类型   float
+var13,var14 := 5,6//自动添加变量类型为int
 //虚数
 var c complex128 = 5+5i
 
 var a, _ = 3, 4 //特殊变量 下拉框  _ 表示接收参数，直接丢弃
 
-
+//主函数
 function main(){
   fmt.Println("var4=%d",var4);
 }
