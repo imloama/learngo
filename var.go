@@ -34,7 +34,7 @@ var var8,var9 int = 3,4
 var ai int
 ai = 1
 
-/按组定义变量
+//按组定义变量
 var(
   var10 int
   var11 string
