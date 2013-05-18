@@ -48,6 +48,22 @@ var c complex128 = 5+5i
 
 var a, _ = 3, 4 //特殊变量 下拉框  _ 表示接收参数，直接丢弃
 
+//定义byte类型
+var byte1 []byte = 'abc'
+var s1 string = "abc"
+//string加
+var s2 string = "abc"+//+只能放在这一行,不能放到下一行,这是要求.
+  "def"
+//定义多行文本
+var s3 string = `abc
+  def`
+//byte与string的相互转换
+var byte2 []byte= []byte(s1)
+var s3 string = string(byte2)
+
+//不能直接修改string引用的内容,如下边的用法是错误的
+s3[0] = 'd'
+
 //主函数
 function main(){
   fmt.Println("var4=%d",var4);
